@@ -24,8 +24,8 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
-h1 small {
-    font-size: 1.5em;
+h1 b {
+    font-size: 50%;
 }
 
 p {
