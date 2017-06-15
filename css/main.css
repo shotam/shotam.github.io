@@ -40,6 +40,11 @@ footer {
     font-size: .8em;
 }
 
+separator {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
