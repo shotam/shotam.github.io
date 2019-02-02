@@ -1,0 +1,62 @@
+ Third, it is also possible that the semantic interference effect is not an effect on the central tendency of production time distributions, and the statistical analysis on central tendency is not an adequate test for the presence or absence of semantic interference effect when the effect is small. Indeed, previous evidence suggests that Stroop-like effects, including semantic interference effects in extended picture word interference pradigm, may reside in the dispersion and the skew of the production time distribution ($\sigma$ and $\tau$ parameters of the ex-Gaussian distribution, respectively)\citep{momma2016timing,heathcote1991analysis}.
+
+We evaluated these possibilities by conducting a post-hoc analysis on Experiment 1. First, we analyzed the second region of interest (the total production time of the adjunct noun head and the auxiliary verb) in the verb distractor condition by means of Vincent averaging procedure \citep{vincent1912functions, ratcliff1979group, lago2015agreement, staub2010distributional, momma2016timing, balota2008beyond,andrews2001distinguishing}. For this analysis, we undid the trimming procedure and log-transformation \citep{staub2010distributional, lago2015agreement}, because the extreme values may carry the cognitively meaningful information and Vincentile analysis does not assume normal distribution. Vincent averaging is a non-parametric way of assessing an effect on the distributional shape of a variable, and is sensitive to the effect on the tails of response time distribution or production time distribution (i.e., $\tau$ effect). The result of this analysis is visualized by means of Vincentile plot (Figure~\ref{}).
+
+
+
+
+##### post-hoc analysis #####
+# 
+# df_raw <- read.csv('/Users/shotamomma/Documents/GitHub/shotam.github.io/Experiments/Octopus/Experiment1/Experiment1_data.csv', comment.char="#")
+# df_raw <- subset(df_raw,df_raw$DistractorType == "Verb")
+# df_vincent <- df_raw
+# 
+# df_vincent$vincentile <- ave((df_vincent$OnsetThe), list(df_vincent$participant, df_vincent$Relatedness, df_vincent$VerbType), FUN = function(x) trunc(rank(x))/length(x))
+# 
+# df_vincent$rank[df_vincent$vincentile <= .2] <- 1
+# df_vincent$rank[df_vincent$vincentile > .2 & df_vincent$vincentile <= .4] <- 2
+# df_vincent$rank[df_vincent$vincentile > .4 & df_vincent$vincentile <= .6] <- 3
+# df_vincent$rank[df_vincent$vincentile > .6 & df_vincent$vincentile <= .8] <- 4
+# df_vincent$rank[df_vincent$vincentile > .8] <- 5
+# 
+# vincentile <- summarySEwithin(df_vincent, measurevar="OnsetThe", withinvars= c("Relatedness", "VerbType", "rank"),
+#                               idvar="participant", na.rm=TRUE, conf.interval=.95)
+# vincentile_unacc <- subset(vincentile, vincentile$VerbType == "Unacc")
+# pdf('/Users/shotamomma/Documents/GitHub/shotam.github.io/Experiments/Octopus/Experiment1/vincenitle_OnsetThe_unacc.pdf')
+# ggplot(vincentile_unacc, aes(x=rank, y=OnsetThe, colour=Relatedness, group = Relatedness)) +
+#   geom_errorbar(aes(ymin=OnsetThe-se, ymax=OnsetThe+se), width=.1) +
+#   geom_line() +
+#   geom_point() + 
+#   labs(title="Vincentile  \n", x="\n Vincentile number", y = "Production time \n")+
+#   scale_y_continuous(limits = c(1000, 2500)) + 
+#   theme_classic() + 
+#   theme(plot.title = element_text(hjust = 0.5), text = element_text(size=20), legend.position = c(0.2, 0.8))
+# dev.off()
+# 
+# 
+# df_raw <- read.csv('/Users/shotamomma/Documents/GitHub/shotam.github.io/Experiments/Octopus/Experiment2/Experiment2_data.csv', comment.char="#")
+# df_raw <- subset(df_raw,df_raw$DistractorType == "Verb")
+# df_raw$AI <- df_raw$apple + df_raw$is
+# df_raw$AI[df_raw$AI > 4000] = NA
+# df_vincent <- df_raw
+# df_vincent$vincentile <- ave((df_vincent$AI), list(df_vincent$participant, df_vincent$Relatedness, df_vincent$VerbType), FUN = function(x) trunc(rank(x))/length(x))
+# df_vincent$rank[df_vincent$vincentile <= .2] <- 1
+# df_vincent$rank[df_vincent$vincentile > .2 & df_vincent$vincentile <= .4] <- 2
+# df_vincent$rank[df_vincent$vincentile > .4 & df_vincent$vincentile <= .5] <- 3
+# df_vincent$rank[df_vincent$vincentile > .5 & df_vincent$vincentile <= .7] <- 4
+# df_vincent$rank[df_vincent$vincentile > .7 & df_vincent$vincentile <= .9] <- 5
+# df_vincent$rank[df_vincent$vincentile > .9] <- 6
+# 
+# vincentile <- summarySEwithin(df_vincent, measurevar="AI", withinvars= c("Relatedness", "VerbType", "rank"),
+#                               idvar="participant", na.rm=TRUE, conf.interval=.95)
+# vincentile_unerg <- subset(vincentile, vincentile$VerbType == "Unerg")
+# pdf('/Users/shotamomma/Documents/GitHub/shotam.github.io/Experiments/Octopus/Experiment1/vincenitle_unerg.pdf')
+# ggplot(vincentile_unerg, aes(x=rank, y=AI, colour=Relatedness, group = Relatedness)) +
+#   geom_errorbar(aes(ymin=AI-se, ymax=AI+se), width=.1) +
+#   geom_line() +
+#   geom_point() + 
+#   labs(title="Vincentile  \n", x="\n Vincentile number", y = "Production time \n")+
+#   scale_y_continuous(limits = c(500, 1500)) + 
+#   theme_classic() + 
+#   theme(plot.title = element_text(hjust = 0.5), text = element_text(size=20), legend.position = c(0.2, 0.8))
+# dev.off()

@@ -1,0 +1,13 @@
+Data: Exp4
+Models:
+Exp4.NoInteraction: TargBinary ~ PrimeType.lev + CardTyp.lev + (1 + PrimeType.lev + 
+Exp4.NoInteraction:     CardTyp.lev + PrimeType.lev:CardTyp.lev | Subject) + (1 + 
+Exp4.NoInteraction:     PrimeType.lev + CardTyp.lev + PrimeType.lev:CardTyp.lev | 
+Exp4.NoInteraction:     Item)
+Exp4.full: TargBinary ~ PrimeType.lev + CardTyp.lev + PrimeType.lev:CardTyp.lev + 
+Exp4.full:     (1 + PrimeType.lev + CardTyp.lev + PrimeType.lev:CardTyp.lev | 
+Exp4.full:         Subject) + (1 + PrimeType.lev + CardTyp.lev + PrimeType.lev:CardTyp.lev | 
+Exp4.full:     Item)
+                   Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+Exp4.NoInteraction 23 1755.6 1880.8 -854.80   1709.6                         
+Exp4.full          24 1757.5 1888.1 -854.76   1709.5 0.0844      1     0.7714

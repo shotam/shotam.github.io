@@ -1,0 +1,13 @@
+Data: Exp2
+Models:
+Exp2.NoInteraction: TargBinary ~ PrimeType.lev + ExpCond.lev + (1 + PrimeType.lev + 
+Exp2.NoInteraction:     ExpCond.lev + PrimeType.lev:ExpCond.lev | Subject) + (1 + 
+Exp2.NoInteraction:     PrimeType.lev + ExpCond.lev + PrimeType.lev:ExpCond.lev | 
+Exp2.NoInteraction:     Trial) + (1 + ExpCond.lev | PrimeCategory)
+Exp2.full: TargBinary ~ PrimeType.lev + ExpCond.lev + PrimeType.lev:ExpCond.lev + 
+Exp2.full:     (1 + PrimeType.lev + ExpCond.lev + PrimeType.lev:ExpCond.lev | 
+Exp2.full:         Subject) + (1 + PrimeType.lev + ExpCond.lev + PrimeType.lev:ExpCond.lev | 
+Exp2.full:     Trial) + (1 + ExpCond.lev | PrimeCategory)
+                   Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+Exp2.NoInteraction 26 3622.4 3781.8 -1785.2   3570.4                         
+Exp2.full          27 3624.2 3789.8 -1785.1   3570.2 0.1116      1     0.7384
