@@ -1,0 +1,13 @@
+Data: Exp2
+Models:
+Exp2.NoInteraction: Response ~ PrimeType.lev + CardType.lev + (1 + PrimeType.lev + 
+Exp2.NoInteraction:     CardType.lev + PrimeType.lev:CardType.lev | Subject) + (1 + 
+Exp2.NoInteraction:     PrimeType.lev + CardType.lev + PrimeType.lev:CardType.lev | 
+Exp2.NoInteraction:     Item)
+Exp2.full: Response ~ PrimeType.lev + CardType.lev + PrimeType.lev:CardType.lev + 
+Exp2.full:     (1 + PrimeType.lev + CardType.lev + PrimeType.lev:CardType.lev | 
+Exp2.full:         Subject) + (1 + PrimeType.lev + CardType.lev + PrimeType.lev:CardType.lev | 
+Exp2.full:     Item)
+                   Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)
+Exp2.NoInteraction 23 1755.6 1880.8 -854.80   1709.6                         
+Exp2.full          24 1757.5 1888.1 -854.76   1709.5 0.0844      1     0.7714

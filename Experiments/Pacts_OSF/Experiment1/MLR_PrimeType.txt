@@ -1,0 +1,16 @@
+Data: Exp1
+Models:
+Exp1.NoPrimeType: Response ~ PrimeCategory.lev1 + PrimeCategory.lev2 + PrimeType.lev:PrimeCategory.lev1 + 
+Exp1.NoPrimeType:     PrimeType.lev:PrimeCategory.lev2 + (1 + PrimeCategory.lev1 + 
+Exp1.NoPrimeType:     PrimeCategory.lev2 + PrimeType.lev:PrimeCategory.lev1 + PrimeType.lev:PrimeCategory.lev2 | 
+Exp1.NoPrimeType:     Subject) + (1 + PrimeType.lev | Item)
+Exp1.full: Response ~ PrimeType.lev + PrimeCategory.lev1 + PrimeCategory.lev2 + 
+Exp1.full:     PrimeType.lev:PrimeCategory.lev1 + PrimeType.lev:PrimeCategory.lev2 + 
+Exp1.full:     (1 + PrimeCategory.lev1 + PrimeCategory.lev2 + PrimeType.lev:PrimeCategory.lev1 + 
+Exp1.full:         PrimeType.lev:PrimeCategory.lev2 | Subject) + (1 + PrimeType.lev | 
+Exp1.full:     Item)
+                 Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)    
+Exp1.NoPrimeType 23 873.69 980.44 -413.84   827.69                             
+Exp1.full        24 855.66 967.05 -403.83   807.66 20.028      1   7.63e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

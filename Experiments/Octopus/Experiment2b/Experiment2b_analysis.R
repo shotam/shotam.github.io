@@ -132,7 +132,6 @@ descriptives <- df_region_bySubj %>% dplyr::group_by(DistractorType, VerbType, R
 descriptives <- spread(descriptives, Region, Mean)
 apa_table(descriptives)
 
-
 ##### creating graph: region-by-region difference #####
 dfV_graph <- subset(df, df$DistractorType == 'Verb')
 graph1 <- as.data.frame(tapply(exp(dfV_graph$Onset),list(dfV_graph$participant,dfV_graph$Relatedness,dfV_graph$VerbType), FUN = function(x) mean(x, na.rm = T)))

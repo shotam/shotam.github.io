@@ -1,0 +1,15 @@
+Data: Exp4
+Models:
+NoInteraction: Response ~ PrimeType.lev + Homogeneity.lev + (1 + PrimeType.lev + 
+NoInteraction:     Homogeneity.lev + PrimeType.lev:Homogeneity.lev | Subject) + 
+NoInteraction:     (1 + PrimeType.lev + Homogeneity.lev + PrimeType.lev:Homogeneity.lev | 
+NoInteraction:         Item)
+full: Response ~ PrimeType.lev + Homogeneity.lev + PrimeType.lev:Homogeneity.lev + 
+full:     (1 + PrimeType.lev + Homogeneity.lev + PrimeType.lev:Homogeneity.lev | 
+full:         Subject) + (1 + PrimeType.lev + Homogeneity.lev + PrimeType.lev:Homogeneity.lev | 
+full:     Item)
+              Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(>Chisq)  
+NoInteraction 23 1664.3 1784.7 -809.14   1618.3                           
+full          24 1660.1 1785.7 -806.04   1612.1 6.1895      1    0.01285 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
