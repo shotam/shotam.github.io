@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>611_SurprisalLecture</title>
+
+
+<style type="text/css">
+body {
+	font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 20px 0 10px;
+  	padding: 0;
+  	font-weight: bold;
+  	-webkit-font-smoothing: antialiased;
+  	cursor: text;
+  	position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+	font-size: 28px;
+    border: 3px solid #892034; 
+    color: black;
+	text-align:right;
+}
+
+h2 {
+	font-size: 24px;
+	background-color:#892034; 
+    color: white; 
+}
+
+h3 {
+	font-size: 18px;
+    border-bottom: 1px solid #892034;
+	color: black; 
+}
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">LINGUIST611: Surprisal</h1>
+
+<h2 id="toc_1">Class goals</h2>
+
+<ul>
+<li>Introduce memory-oriented and expectation-oriented approaches to processing</li>
+</ul>
+
+<h3 id="toc_2">Two big ideas</h3>
+
+<p>There are two big ideas that we will explore today, as we discuss Hale (2001). They are:</p>
+
+<p>Idea #1: The relationship between the parser and the grammar is one of &#39;strong competence&#39; - that is, the rules of grammar are directly engaged in the moment by moment processing of words.</p>
+
+<p>Idea #2: Our lifetime of experience gives us sharp expectations about the likelihood of different linguistic events, and we use this knowledge to infer the structure of the strings we are hearing. </p>
+
+<h3 id="toc_3">Expectation-based approaches to comprehension</h3>
+
+<p>The approach to sentence comprehension that encodes these two big ideas in a specific parsing model has come to be called <strong>Surprisal theory</strong>. Rather than focusing on the description of the principles that underly the moment by moment processes of understanding the input, <strong>expectation-based</strong> approaches highlight the key role of our linguistic experience in guiding processing. More specifically, this view has come to be  Here, the leading idea is:</p>
+
+<ul>
+<li>Our linguistic experience affords us accurate estimates of how often different linguistic structures are encountered. </li>
+<li>Those estimates form the basis of subjective probability distributions.</li>
+<li>Those probability distributions are directly deployed, in conjunction with grammatical knowledge, to parse our input. </li>
+</ul>
+
+<p>The resulting view is one that Hale (2001) calls <strong>strong competence</strong>: we are adopting the minimum amount of cognitive overhead to explain the processing of sentences. Instead, we simply assume that comprehenders have access to their grammar, knowledge of how often different structures occur in the input, and they simply treat the processing problem as an inference problem. Word by word we ask: <em>what&#39;s the most probable syntactic structure now?</em></p>
+
+<p><strong>Discussion point</strong>: How does strong competence contrast with other approaches we have seen to sentence and word comprehension so far? Does the adoption of this principle seem justified / motivated to you?</p>
+
+<p>Let&#39;s introduce one key concept to see how this works: a <strong>probabilistic context free grammar</strong>. A PCFG is just like a vanilla context free grammar, with a twist: the rules now have weights appended to them: </p>
+
+<p><img src="Images/pcfg.png" alt=""></p>
+
+<p>These weights are conditional probabilities. They specify the probability that a given node will be rewritten as the sequence of symbols to its right. For example, note that <code>NP</code> has three different possible expansions in this grammar. They are all equally frequent; therefore, each has a probability of 1/3. </p>
+
+<p>This grammar comes from Hale (2001). It is largely a toy grammar, except in one key respect: it represents the distributional fact that SRCs are much more frequent than ORCs. How does surprisal theory link this observation to moment by moment processing?</p>
+
+<p>Probabilistic grammars like the one above can be used to define <strong>language models</strong> - probabilistic models that can assign a probability to any arbitrary string licensed by a grammar. In many modern NLP systems, language models are used to estimate the conditional probability of words in context. This could be useful for, example, speech recognition systems, where having an estimate of the probability of a word being mentioned in a context can help provide some top-down information that can facilitate speech recognition.</p>
+
+<p>The probability of a word in context is often quantified with <strong>surprisal</strong>, that is, the negative log probability of a word in context. Low probability, high surprisal; High probability, low surprisal. Surprisal theory states that the difficulty in recognizing / integrating a word into context is a monotonic function of its surprisal: the higher surprisal a word is, the more difficult it is to process:</p>
+
+<p><img src="Images/surprisal.png" alt=""></p>
+
+<p>Amazing, Levy (2008) showed that this value is formally equivalent to the <strong>relative entropy</strong> over syntactic structures before and after seeing a word. In other words, more surprising words are more surprising because they lead to a more dramatic update of our beliefs about what structures are likely.</p>
+
+<p>How do we know how probable a word is? Surprisal theory says that the probability of a word comes from the probability of that word <em>in a parse</em>. All consistent parses with a string are activated in proportion to their probability. So we need to know i) how to compute a tree&#39;s probability for a given string and ii) how to combine those probabilities to derive an estimate of the surprisal of a word in context.</p>
+
+<p>Let&#39;s see how we get (i). It comes right from our PCFG:</p>
+
+<p><img src="Images/treeprob.png" alt=""></p>
+
+<p>As for (ii), it comes from a weighted average of all the activated parses. Each contributes in proportion to its activation. More technically, this is known as <strong>marginalization</strong>:</p>
+
+<p><img src="Images/marginal.png" alt=""></p>
+
+<p>Interestingly, Hale (2001) showed that this explains the SRC/ORC asymmetry. Let&#39;s look at Hale&#39;s example, and work it out for ourselves.</p>
+
+<p><img src="Images/hale_2001.png" alt=""></p>
+
+<p>Note that the point in the sentence where difficulty is predicted to occur is very different on this theory!</p>
+
+<ul>
+<li>Expectation-based theories say ORCs should be difficult at the embedded subject, because this point is where there is unambiguous evidence for the less frequent structure. </li>
+<li>Memory-based theories say ORCs should be difficult at the embedded verb, because this i the point where integration costs are incurred. </li>
+</ul>
+
+<p>Staub (2010) argued that self-paced reading is too coarse to get a precise measurement of exactly which word causes the difficulty. He proposed instead to use eye-tracking-while-reading to measure processing difficulty:</p>
+
+<p><img src="Images/staub_2010.png" alt=""> </p>
+
+<p>Consistent with the predictions of both expectation-based and memory-based theories, difficulty is seen at both words, although perhaps more clearly in the embedded subject region. </p>
+
+<p>Surprisal theory also makes accurate predictions about where garden path difficulty will arise. Consider this toy grammar, and the word by word surprisals:</p>
+
+<p><img src="Images/hale_2001_mvrrgrammar.png" alt=""></p>
+
+<p><img src="Images/hale_2001_mvrr.png" alt=""></p>
+
+<p><strong>Discussion point</strong>: What&#39;s the difference between a &#39;garden path&#39; effect under Hale&#39;s theory, and a &#39;garden path&#39; effect under the classical Garden Path Theory? Are they similar types of mental events? In what ways are they different?</p>
+
+<h3 id="toc_4">Ambiguity advantage effect</h3>
+
+<p>One surprising prediction that immediately follows from Hale and Levy&#39;s surprisal theory is that ambiguous sentences should in some cases be <em>easier</em> than unambiguous sentences. </p>
+
+<p>Consider the following triplet of sentences:</p>
+
+<p>[AMBIGUOUS]: If you flipped the channel, you would see the accomplices of the thieves who <strong>were indicted</strong> for stealing the Mona Lisa. </p>
+
+<p>[HIGH ATTACH]: If you flipped the channel, you would see the accomplices of the thief who <strong>were indicted</strong> for stealing the Mona Lisa. </p>
+
+<p>[LOW ATTACH]: If you flipped the channel, you would see the accomplice of the thieves who <strong>were indicted</strong> for stealing the Mona Lisa. </p>
+
+<p>The first sentence has a relative clause whose attachment site is globally ambiguous. In the second and third sentence, the attachment site of the relative clause is unambiguous: the number marking on the NPs forces it to attach &#39;high&#39; (i.e. to the first NP) or &#39;low&#39; (i.e. to the second NP). </p>
+
+<p>Somewhat counterintuitively, it is the <em>ambiguous</em> condition that is easier to process than the second and third, a phenomenon known as the ambiguity advantage effect (first discovered by Traxler, Clifton &amp; Pickering, 1998):</p>
+
+<p><img src="Images/aae_2.png" alt=""></p>
+
+<p>This is exactly the response pattern predicted by surprisal theory. The critical region (and especially the inflected auxiliary <em>were</em>) is more predictable or expected in the ambiguous condition. This is because whether the relative clause attaches high, or attaches low, it is a fairly probable completion. However, in either of the high or low attachment conditions, it becomes less probable, because it is not grammatically consistent with one or another of the potential parses.  </p>
+
+<h3 id="toc_5">Anti-locality</h3>
+
+<p>To now we have focused on locality effects in sentence processing, which have a pleasing intuitive quality to them: close should be easier!</p>
+
+<p>It turns out that expectation-based theories make a unique, and very interesting prediction: in certain cases, we should be able to see <em>anti-locality</em> effects. One of the earliest demonstrations of this was Konieczny &amp; Döring (2003):</p>
+
+<p><img src="Images/kd_2003.png" alt=""></p>
+
+<p>These two sentences differ in a single letter: s vs. m. But the difference in this one letter conveys a case difference. In one example, &#39;friend&#39; is a genitive modifier of the preceding noun, in the other, it is a dative dependent of the verb. What differs in these two is that the dative conveys more information about the verb that it upcoming and (critically from the point of view of Surprisal), reduces the space of possible upcoming words. The parser has already seen the dative, so it has reduced the number of possible continuations dramatically. On the other hand, the genitive is not very information about the structure of the VP, and so it gives little information. </p>
+
+<p>In a striking finding, Konieczny &amp; Döring found that reading times were faster following the dative argument. It seems that having additional dependents did <em>not</em> increase reading time. Instead, reading times were faster, as predicted by Surprisal theory:</p>
+
+<p><img src="Images/kd_2003_1.png" alt=""></p>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
